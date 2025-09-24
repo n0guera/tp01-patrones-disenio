@@ -25,7 +25,7 @@ class SMSNotifier implements Notifier {
 class OrderService {
     private Notifier $notifier;
 
-    // Inyección de dependencias
+    //Inyección de dependencias
     public function __construct(Notifier $notifier) {
         $this->notifier = $notifier;
     }
@@ -36,7 +36,7 @@ class OrderService {
     }
 }
 
-// ====== Uso ======
+//Uso
 $orderServiceEmail = new OrderService(new EmailNotifier());
 $orderServiceEmail->createOrder("Laptop");
 
